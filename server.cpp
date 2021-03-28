@@ -73,6 +73,7 @@ int main(int argc, char *argv[]) {
 
   // Listen to requests
   listen(serverSd, 5);
+  cout << "Running server on port " << port << endl;
   // New address to connect with the client
   sockaddr_in newSockAddr;
   socklen_t newSockAddrSize = sizeof(newSockAddr);
@@ -95,7 +96,7 @@ int main(int argc, char *argv[]) {
   int option = 0;
   int operationCode = 0;
   geek >> option;
-  string response;
+  string response = "0";
 
   // Search film
   for (int i = 1; i < 78; i++) {
